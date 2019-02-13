@@ -1,4 +1,4 @@
-package pl.lukas;
+package pl.lukas.junitTests;
 
 import static org.junit.Assert.assertTrue;
 

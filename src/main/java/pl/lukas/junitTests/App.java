@@ -1,4 +1,4 @@
-package pl.lukas;
+package pl.lukas.junitTests;
 
 /**
  * Hello world!
