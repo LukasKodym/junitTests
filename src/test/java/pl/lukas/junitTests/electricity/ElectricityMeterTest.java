@@ -9,7 +9,7 @@ public class ElectricityMeterTest {
     public void addKwh_newMeter_properAddition() {
         ElectricityMeter electricityMeter = new ElectricityMeter();
         electricityMeter.addKwh(1);
-        Assert.assertTrue(electricityMeter.getKwh() == 1);
+        Assert.assertTrue("",electricityMeter.getKwh() == 1);
     }
 
     @Test
@@ -45,10 +45,18 @@ public class ElectricityMeterTest {
         electricityMeter.addKwh(1);
         Assert.assertTrue(electricityMeter.getKwh() == 2);
     }
+
     @Test
     public void givenNewMeterWhenFirsAdditionThenProperCounter() {
         ElectricityMeter electricityMeter = new ElectricityMeter();
         electricityMeter.addKwh(1);
         Assert.assertTrue(electricityMeter.getKwh() == 1);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void getHowMoreExpensiveNormalIs() {
+        ElectricityMeter electricityMeter = new ElectricityMeter();
+        electricityMeter.setCentsForKwh(90);
+        electricityMeter.getHowMoreExpensiveNormalIs();
     }
 }
