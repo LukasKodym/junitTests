@@ -35,6 +35,10 @@ public class ElectricityMeter {
         return (centsForKwh * 100 / centsForKwhTariff) - 100;
     }
 
+    public float getKwh() {
+        return kwh;
+    }
+
     void setCentsForKwh(int centsForKwh) {
         this.centsForKwh = centsForKwh;
     }
@@ -54,4 +58,5 @@ public class ElectricityMeter {
     void setElectricityTariffEndHour(int electricityTariffEndHour) {
         this.electricityTariffEndHour = electricityTariffEndHour;
     }
+
 }
