@@ -1,8 +1,9 @@
 package pl.lukas.junitTests.electricity;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
-
+// @Ignore // ignore all package
 public class ElectricityMeterTest {
 
     @Test
@@ -12,11 +13,12 @@ public class ElectricityMeterTest {
         Assert.assertTrue("",electricityMeter.getKwh() == 1);
     }
 
+    @Ignore("not implemented yet")
     @Test
     public void addKwh_newMeter2_properAddition() {
         ElectricityMeter electricityMeter = new ElectricityMeter();
         electricityMeter.addKwh(1);
-        electricityMeter.addKwh(4);
+        electricityMeter.addKwh(3);
         Assert.assertTrue(electricityMeter.getKwh() == 5);
     }
 
