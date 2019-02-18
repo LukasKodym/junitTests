@@ -18,15 +18,15 @@ public class ExistElectricityMeterTest {
     public void setUp() {
         // assure deterministic start environment
         electricityMeter.addKwh(100);
-            }
+    }
 
     @AfterClass
-    public static void release(){
+    public static void release() {
         // release connections/files etc.
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         electricityMeter.reset();
     }
 
@@ -37,9 +37,12 @@ public class ExistElectricityMeterTest {
         Assert.assertTrue("", electricityMeter.getKwh() == 101);
     }
 
-    @Ignore("not implemented yet")
+    //    @Ignore("not implemented yet")
     @Test
     public void addKwh_newMeter2_properAddition() {
+
+
+
         electricityMeter.addKwh(1);
         electricityMeter.addKwh(3);
         Assert.assertTrue(electricityMeter.getKwh() == 104);
