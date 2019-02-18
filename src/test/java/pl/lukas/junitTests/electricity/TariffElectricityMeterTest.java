@@ -39,5 +39,4 @@ public class TariffElectricityMeterTest {
         // Then
         Assert.assertEquals(100, electricityMeter.getKwh(), 0.01);
     }
-
 }

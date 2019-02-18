@@ -27,7 +27,6 @@ public class ElectricityMeter {
         };
     }
 
-
     public ElectricityMeter(TariffProvider tp) {
         this.tp = tp;
     }
@@ -78,7 +77,6 @@ public class ElectricityMeter {
     void setElectricityTariffEndHour(int electricityTariffEndHour) {
         this.electricityTariffEndHour = electricityTariffEndHour;
     }
-
 
     public void reset() {
         kwh = 0;

@@ -7,7 +7,6 @@ public class ExistElectricityMeterTest {
 
     private static ElectricityMeter electricityMeter;
 
-
     @BeforeClass
     public static void init() {
         // computation expensive steps before starting test class
@@ -30,7 +29,6 @@ public class ExistElectricityMeterTest {
         electricityMeter.reset();
     }
 
-
     @Test
     public void addKwh_newMeter_properAddition() {
         electricityMeter.addKwh(1);
@@ -40,9 +38,6 @@ public class ExistElectricityMeterTest {
     //    @Ignore("not implemented yet")
     @Test
     public void addKwh_newMeter2_properAddition() {
-
-
-
         electricityMeter.addKwh(1);
         electricityMeter.addKwh(3);
         Assert.assertTrue(electricityMeter.getKwh() == 104);
@@ -74,6 +69,7 @@ public class ExistElectricityMeterTest {
     @Test
     public void givenNewMeterWhenFirsAdditionThenProperCounter() {
         // given
+
         // when // we can use labels e.g. When:, but cannot be use in declare of a new variable
         electricityMeter.addKwh(1);
         // then

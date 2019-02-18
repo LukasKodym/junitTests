@@ -7,7 +7,6 @@ public class NewElectricityMeterTest {
 
     private static ElectricityMeter electricityMeter;
 
-
     @BeforeClass
     public static void init() {
         // computation expensive steps before starting test class
@@ -27,9 +26,7 @@ public class NewElectricityMeterTest {
 
     @After
     public void tearDown() {
-
     }
-
 
     @Test
     public void addKwh_newMeter_properAddition() {
