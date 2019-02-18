@@ -14,7 +14,7 @@ public class TwoElectricityMetersTest {
         Assert.assertTrue("",electricityMeter1.getKwh() == 1);
     }
 
-    @Ignore("not implemented yet")
+//    @Ignore("not implemented yet")
     @Test
     public void addKwh_newMeter2_properAddition() {
         ElectricityMeter electricityMeter1 = new ElectricityMeter();
