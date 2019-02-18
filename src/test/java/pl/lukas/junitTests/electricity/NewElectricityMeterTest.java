@@ -3,7 +3,7 @@ package pl.lukas.junitTests.electricity;
 import org.junit.*;
 
 // @Ignore // ignore all package
-public class ElectricityMeterTest {
+public class NewElectricityMeterTest {
 
     private static ElectricityMeter electricityMeter;
 
@@ -11,7 +11,7 @@ public class ElectricityMeterTest {
     @BeforeClass
     public static void init() {
         // computation expensive steps before starting test class
-        ElectricityMeterTest.electricityMeter = new ElectricityMeter();
+        NewElectricityMeterTest.electricityMeter = new ElectricityMeter();
     }
 
     @Before
@@ -20,6 +20,15 @@ public class ElectricityMeterTest {
         electricityMeter.reset();
     }
 
+    @AfterClass
+    public static void release() {
+        // release connections/files etc.
+    }
+
+    @After
+    public void tearDown() {
+
+    }
 
 
     @Test
@@ -62,6 +71,7 @@ public class ElectricityMeterTest {
     @Test
     public void givenNewMeterWhenFirsAdditionThenProperCounter() {
         // given
+
         // when // we can use labels e.g. When:, but cannot be use in declare of a new variable
         electricityMeter.addKwh(1);
         // then

@@ -20,7 +20,7 @@ public class TwoElectricityMetersTest {
         ElectricityMeter electricityMeter1 = new ElectricityMeter();
         electricityMeter1.addKwh(1);
         electricityMeter1.addKwh(3);
-        Assert.assertTrue(electricityMeter1.getKwh() == 5);
+        Assert.assertTrue(electricityMeter1.getKwh() == 4);
     }
 
     @Test
