@@ -45,7 +45,7 @@ public class EdgeTariffElectricityMeterTest {
         Mockito.when(tp.isTariffNow()).thenReturn(isTariffInCase);
         //When
         electricityMeter.addKwh(kwhUsedInCase);
-        //Then
+        //Then // there is not necessary to use if else statement
         if (isTariffInCase) {
             Assert.assertEquals(sumKwhTariffInCase, electricityMeter.getKwhTariff(), 0.01);
         } else {
