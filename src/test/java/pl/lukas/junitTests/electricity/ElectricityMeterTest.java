@@ -17,8 +17,8 @@ class ElectricityMeterTest {
     }
 
     @Test
-    @Disabled("Testing disabling")
-    public void givenTariffOnWhenAdditionThenKwhIncreased(){
+    @Disabled("Testing disabling") // the same functionality as @Ignore
+    public void givenTariffOnWhenAdditionThenKwhIncreased() {
         //Given
         Mockito.when(tp.isTariffNow()).thenReturn(false);
         electricityMeter = new ElectricityMeter(tp);
@@ -43,18 +43,18 @@ class ElectricityMeterTest {
         assertEquals(exception.getMessage(), "/ by zero");
     }
 
-    @RepeatedTest(value = 285, name=" {displayName} {currentRepetition}/{totalRepetitions}")
+    @RepeatedTest(value = 285, name = " {displayName} {currentRepetition}/{totalRepetitions}")
     @DisplayName("Tesst wielokrotny")
-    public void givenMuchAdditionsWhenAdditionThenNoTariffChange(RepetitionInfo repetitionInfo){
+    public void givenMuchAdditionsWhenAdditionThenNoTariffChange(RepetitionInfo repetitionInfo) {
         //Given
         Mockito.when(tp.isTariffNow()).thenReturn(false);
         //when
         electricityMeter.addKwh(50);
         //then
-        Assertions.assertEquals(repetitionInfo.getCurrentRepetition()* 50, electricityMeter.getKwh());
+        Assertions.assertEquals(repetitionInfo.getCurrentRepetition() * 50, electricityMeter.getKwh());
         Assertions.assertAll("Testing Tariff",
-                ()-> assertEquals(electricityMeter.getKwhTariff(), 0),
-                ()-> assertTrue(electricityMeter.getKwh()%50==0));
+                () -> assertEquals(electricityMeter.getKwhTariff(), 0),
+                () -> assertTrue(electricityMeter.getKwh() % 50 == 0));
     }
 
 }
